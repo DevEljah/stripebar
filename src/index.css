@@ -382,7 +382,7 @@ Stripe Styles
   top: 4rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 3; /* !!!! */
   display: none; /* !!!! */
   padding: 2rem;
   border-radius: var(--radius);

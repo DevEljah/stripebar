@@ -157,6 +157,9 @@ Stripe Styles
   justify-content: space-between;
   align-items: center;
 }
+/* .nav-logo {
+  
+} */
 .btn {
   font-size: 1rem;
   padding: 0.25rem 0.75rem;
@@ -183,7 +186,7 @@ Stripe Styles
   height: 65%;
   top: 0;
   left: 0;
-  background: url(./images/hero.svg);
+  background: url(./img/hero.svg);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;

@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 const AppContext = React.createContext();
 
-const AppProvider = ({ Children }) => {
+export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(true);
 
@@ -30,7 +30,12 @@ const AppProvider = ({ Children }) => {
         closeSubmenu,
       }}
     >
-      {Children}
+      {children}
     </AppContext.Provider>
   );
+};
+
+// Custom Hook!
+export const useGlobalContext = () => {
+  return AppProvider(AppContext);
 };

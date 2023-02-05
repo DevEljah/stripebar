@@ -146,7 +146,7 @@ Stripe Styles
   justify-content: center;
   background: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 1; /* !!!! */
 }
 .nav-center {
   width: 90vw;
@@ -174,10 +174,10 @@ Stripe Styles
   background: var(--clr-grey-5);
 }
 .nav-links {
-  display: none;
+  display: none; /* !!!! */
 }
 .signin-btn {
-  display: none;
+  display: none; /* !!!! */
 }
 .hero::before {
   content: "";
@@ -189,7 +189,7 @@ Stripe Styles
   background: url(./img/hero.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -1; /* !!!! */
 }
 .hero {
   position: relative;
@@ -216,7 +216,7 @@ Stripe Styles
   line-height: 1.8;
 }
 .hero-images {
-  display: none;
+  display: none; /* !!!! */
 }
 
 /* nav media query */
@@ -227,13 +227,13 @@ Stripe Styles
     align-items: center;
   }
   .toggle-btn {
-    display: none;
+    display: none; /* !!!! */
   }
   .signin-btn {
-    display: inline-block;
+    display: inline-block; /* !!!! */
   }
   .nav-links {
-    display: block;
+    display: block; /* !!!! */
     justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -274,7 +274,7 @@ Stripe Styles
     font-size: 1.25rem;
   }
   .hero-images {
-    display: block;
+    display: block; /* !!!! */
     justify-self: center;
   }
   .phone-img {
@@ -317,15 +317,15 @@ Stripe Styles
   height: 100%;
   display: grid;
   place-items: center;
-  visibility: hidden;
-  z-index: -1;
+  visibility: hidden; /* !!!! */
+  z-index: -1; /* !!!! */
   transition: var(--transition);
   transform: scale(0);
   background: rgba(0, 0, 0, 0.5);
 }
 .sidebar-wrapper.show {
-  visibility: visible;
-  z-index: 2;
+  visibility: visible; /* !!!! */
+  z-index: 2; /* !!!! */
   transform: scale(1);
 }
 .sidebar {
@@ -357,7 +357,7 @@ Stripe Styles
   row-gap: 0.25rem;
 }
 .sidebar-sublinks a {
-  display: block;
+  display: block; /* !!!! */
   color: var(--clr-grey-1);
   text-transform: capitalize;
   display: flex;
@@ -370,7 +370,7 @@ Stripe Styles
 
 @media screen and (min-width: 800px) {
   .sidebar-wrapper {
-    display: none;
+    display: none; /* !!!! */
   }
 }
 
@@ -383,14 +383,14 @@ Stripe Styles
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
-  display: none;
+  display: none; /* !!!! */
   padding: 2rem;
   border-radius: var(--radius);
   transition: var(--transition);
 }
 .submenu::before {
   content: "";
-  display: block;
+  display: block; /* !!!! */
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -403,7 +403,7 @@ Stripe Styles
 }
 
 .submenu.show {
-  display: block;
+  display: block; /* !!!! */
 }
 
 .submenu-center {
@@ -424,7 +424,7 @@ Stripe Styles
 }
 .submenu-center a {
   width: 10rem;
-  display: block;
+  display: block; /* !!!! */
   color: var(--clr-grey-1);
   text-transform: capitalize;
   display: flex;

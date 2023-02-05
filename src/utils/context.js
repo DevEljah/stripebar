@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -37,5 +37,5 @@ export const AppProvider = ({ children }) => {
 
 // Custom Hook!
 export const useGlobalContext = () => {
-  return AppProvider(AppContext);
+  return useContext(AppContext);
 };

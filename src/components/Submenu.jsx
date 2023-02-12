@@ -2,7 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../utils/context";
 
 export default function Submenu() {
-  const { isSubmenuOpen, location } = useGlobalContext();
+  const {
+    isSubmenuOpen,
+    location,
+    page: { page, links },
+  } = useGlobalContext();
   // useRef have been set-up to access the submenu "container".
   const container = useRef(null);
   // everytime the location value changes "useEffect" gonna run.
@@ -20,7 +24,18 @@ export default function Submenu() {
       className={`${isSubmenuOpen ? "submenu show" : "submenu"}`}
       ref={container}
     >
-      Submenu
+      <h4>{page}</h4>
+      <div className={`submenu-center col-2`}>
+        {links.map((link, index) => {
+          const { label, icon, url } = link;
+          return (
+            <a key={index} href={url}>
+              {icon}
+              {label}
+            </a>
+          );
+        })}
+      </div>
     </aside>
   );
 }

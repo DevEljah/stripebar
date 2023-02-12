@@ -13,10 +13,11 @@ export default function Navbar() {
     const temBtn = e.target.getBoundingClientRect();
     // console.log(temBtn);
     const center = (temBtn.left + temBtn.right) / 2; // to centralize
-    const bottem = temBtn.bottem - 3; // "sebmenu" lifted 3px up
+    const bottom = temBtn.bottom - 3; // "sebmenu" lifted 3px up
     // openSubmenu(); ==>
-    openSubmenu(page, { center, bottem });
+    openSubmenu(page, { center, bottom });
   };
+
   return (
     <nav className="nav">
       <div className="nav-center">
@@ -29,17 +30,17 @@ export default function Navbar() {
         <ul className="nav-links">
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
-              Products
+              products
             </button>
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
-              Developers
+              developers
             </button>
           </li>
           <li>
             <button className="link-btn" onMouseOver={displaySubmenu}>
-              Company
+              company
             </button>
           </li>
         </ul>

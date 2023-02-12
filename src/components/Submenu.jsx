@@ -7,13 +7,13 @@ export default function Submenu() {
   const container = useRef(null);
   // everytime the location value changes "useEffect" gonna run.
   useEffect(() => {
-    // in useEffect this is where the conainer bc
+    // this is (in useEffect) where to get the container bc
     // the "inline CSS" will be added.
-    const submenu = container.current;
+    const submenu = container.current; // this gets the node !
     const { center, bottem } = location; // Destructuring!
     submenu.style.left = `${center}px`; // this gonna set it(the submenu when overing the mouse) up in the center
     submenu.style.top = `${bottem}px`; // vertically set up // (how many px from the top)
-  }, [location]);
+  }, [location]); // useEffect runs everytime the location changes !
 
   return (
     <aside

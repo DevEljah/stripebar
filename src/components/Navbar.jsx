@@ -8,12 +8,12 @@ export default function Navbar() {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
   const displaySubmenu = (e) => {
     // console.log(e.target);
-    const page = e.target.textContext;
+    const page = e.target.textContent;
     // get the location //
     const temBtn = e.target.getBoundingClientRect();
     // console.log(temBtn);
-    const center = (temBtn.left + temBtn.right) / 2;
-    const bottem = temBtn.bottem - 3; // "sebmenu lifted 3px up  "
+    const center = (temBtn.left + temBtn.right) / 2; // to centralize
+    const bottem = temBtn.bottem - 3; // "sebmenu" lifted 3px up
     // openSubmenu(); ==>
     openSubmenu(page, { center, bottem });
   };

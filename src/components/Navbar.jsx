@@ -18,8 +18,15 @@ export default function Navbar() {
     openSubmenu(page, { center, bottom });
   };
 
+  const handleSobmenu = (e) => {
+    if (!e.target.classList.contains("link-btn")) {
+      //if the target does not have the "link-btn"
+      closeSubmenu();
+    }
+  };
+
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleSobmenu}>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="stripe" />
